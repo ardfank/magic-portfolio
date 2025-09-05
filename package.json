@@ -2,9 +2,13 @@
   "name": "@once-ui-system/magic-portfolio",
   "version": "2.3.0",
   "scripts": {
+    "build": "next build",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "dev": "next dev",
     "export": "next export",
-    "build": "next build",
     "biome-write": "npx @biomejs/biome format --write .",
     "start": "next start",
     "lint": "next lint"
@@ -13,6 +17,7 @@
     "@mdx-js/loader": "^3.1.0",
     "@next/mdx": "^15.3.1",
     "@once-ui-system/core": "^1.4.27",
+    "@opennextjs/cloudflare": "^1.8.0",
     "classnames": "^2.5.1",
     "cookie": "^1.0.2",
     "gray-matter": "^4.0.3",
@@ -33,6 +38,7 @@
     "@types/react-dom": "^19.0.0",
     "eslint": "^9.25.0",
     "typescript": "^5.8.3",
-    "tzdata": "^1.0.44"
+    "tzdata": "^1.0.44",
+    "wrangler": "^4.34.0"
   }
 }
